@@ -53,3 +53,9 @@ buttonNxt.addEventListener('click', function() {
    index++;
    document.getElementsByClassName('my_carousel-item')[index].classList.add('active');
 })
+
+buttonPre.addEventListener('click', function() {
+   document.getElementsByClassName('my_carousel-item')[index].classList.remove('active');
+   index--;
+   document.getElementsByClassName('my_carousel-item')[index].classList.add('active');
+})
