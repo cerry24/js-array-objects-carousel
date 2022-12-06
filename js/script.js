@@ -30,6 +30,9 @@ const images = [
 
 
 const carouselElement = document.querySelector('div.carousel-image');
+const buttonPre = document.querySelector('div.button.previous');
+const buttonNxt = document.querySelector('div.button.next');
+
 
 for ( i = 0; i < images.length; i++ ) {
    const carouselItem = document.createElement('div');
@@ -40,3 +43,13 @@ for ( i = 0; i < images.length; i++ ) {
 
    carouselElement.appendChild(carouselItem);
 }
+
+let index = 0;
+
+document.getElementsByClassName('my_carousel-item')[index].classList.add('active');
+
+buttonNxt.addEventListener('click', function() {
+   document.getElementsByClassName('my_carousel-item')[index].classList.remove('active');
+   index++;
+   document.getElementsByClassName('my_carousel-item')[index].classList.add('active');
+})
