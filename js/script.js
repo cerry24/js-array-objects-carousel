@@ -39,7 +39,7 @@ for ( i = 0; i < images.length; i++ ) {
 
    carouselItem.classList.add('my_carousel-item');
 
-   carouselItem.innerHTML = `<img src="${images[i].image}" alt="game image">`;
+   carouselItem.innerHTML = `<img src="${images[i].image}" alt="game image"> <h2>${images[i].title}</h2> <p>${images[i].text}</p>`;
 
    carouselElement.appendChild(carouselItem);
 }
